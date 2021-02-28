@@ -1,5 +1,8 @@
 #include<iostream>
 #include<vector>
+#include<string>
+#include<cstdlib>
+
 using std::vector;
 using std::string;
 enum Rank {ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
@@ -21,6 +24,7 @@ struct Deck {
 void initialize(Deck&);
 void print_deck(const Deck&);
 void print_card(const Card&);
+void shuffle(Deck&)
 
 int main()
 {
@@ -57,8 +61,20 @@ void print_card(const Card& card)
   std::cout << "Suit = " << card.suit << '\n';
 };
   
+void shuffle(Deck& deck)
+{
+  Deck shuffled;
+  while(!deck.cards.empty())
+  {
+    size_t rand_deck = rand() % deck.cards.size();
+    shuffled.cards.push_back(deck.cards[rand_index];
+    deck.cards.erase(deck.cards.begin() + rand_index);
+
+  };
+  deck = shuffled;
 
 
+};
 
 
 
