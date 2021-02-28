@@ -59,7 +59,7 @@ void print_deck(const Deck& deck)
 void print_card(const Card& card)
 {
   std::cout << "Rank = " << card.rank; 
-  std::cout << "Suit = " << card.suit << '\n';
+  std::cout << "    Suit = " << card.suit << '\n';
 };
   
 void shuffle(Deck& deck)
