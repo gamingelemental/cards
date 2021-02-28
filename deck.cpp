@@ -24,12 +24,13 @@ struct Deck {
 void initialize(Deck&);
 void print_deck(const Deck&);
 void print_card(const Card&);
-void shuffle(Deck&)
+void shuffle(Deck&);
 
 int main()
 {
   Deck my_deck;
   initialize(my_deck);
+  shuffle(my_deck);
   print_deck(my_deck);
 };
 
@@ -66,7 +67,7 @@ void shuffle(Deck& deck)
   Deck shuffled;
   while(!deck.cards.empty())
   {
-    size_t rand_deck = rand() % deck.cards.size();
+    size_t rand_index = rand() % deck.cards.size();
     shuffled.cards.push_back(deck.cards[rand_index];
     deck.cards.erase(deck.cards.begin() + rand_index);
 
