@@ -68,7 +68,7 @@ void shuffle(Deck& deck)
   while(!deck.cards.empty())
   {
     size_t rand_index = rand() % deck.cards.size();
-    shuffled.cards.push_back(deck.cards[rand_index];
+    shuffled.cards.push_back(deck.cards[rand_index]);
     deck.cards.erase(deck.cards.begin() + rand_index);
 
   };
